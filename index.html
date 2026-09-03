@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso JS - EXIA</title>
-    <style>
-        body { font-family: sans-serif; max-width: 500px; margin: 40px auto; }
-        a { display: block; padding: 8px 0; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Tienda Online</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script src="js/productos.js" defer></script>
+  <script src="js/carrito.js" defer></script>
+  <script src="js/app.js" defer></script>
 </head>
 <body>
-    <h1>Curso JavaScript</h1>
-    <a href="Clase1.html">Clase 1 - Variables</a>
-    <a href="Clase2.html">Clase 2 - Ciclos</a>
-    <a href="Clase3.html">Clase 3 - Funciones</a>
-    <a href="Clase4.html">Clase 4 - Arrays</a>
-    <a href="Clase5.html">Clase 5 - Objetos</a>
-    <a href="Clase6.html">Clase 6 - Orden superior</a>
-    <a href="Clase7.html">Clase 7 - DOM y eventos</a>
-    <a href="Clase8.html">Clase 8 - localStorage</a>
-    <a href="Clase9.html">Clase 9 - Asincronismo</a>
-    <a href="Clase10.html">Clase 10 - APIs</a>
+  <header>
+    <h1>Mi Tienda Online</h1>
+  </header>
+
+  <div class="container">
+    <div class="buscar">
+      <input type="text" id="buscar" placeholder="Buscar productos...">
+    </div>
+
+    <div id="cargando" style="text-align:center;padding:20px;color:#999">Cargando productos...</div>
+
+    <div class="productos-grid" id="productos-grid"></div>
+
+    <div class="carrito-seccion">
+      <h2>Carrito</h2>
+      <div id="carrito-items"></div>
+      <div class="carrito-footer" id="carrito-footer" style="display:none">
+        <div class="total" id="carrito-total"></div>
+        <div class="botones">
+          <button class="btn-vaciar" id="btn-vaciar">Vaciar carrito</button>
+          <button class="btn-confirmar" id="btn-confirmar">Confirmar compra</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </body>
 </html>
