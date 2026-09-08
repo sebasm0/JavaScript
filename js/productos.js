@@ -4,7 +4,7 @@ async function cargarProductos() {
   const contenedor = document.getElementById("productos-grid");
 
   try {
-    const respuesta = await fetch("data.json");
+    const respuesta = await fetch("data/data.json");
 
     if (!respuesta.ok) {
       throw new Error("No se pudieron cargar los productos");

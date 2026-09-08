@@ -18,12 +18,12 @@ Un simulador de tienda online donde podes ver productos, buscarlos, agregarlos a
 ## Archivos
 
 ```
-index.html          La pagina principal
-data.json           Los productos con sus imagenes
-css/style.css       Los estilos de la pagina
-js/productos.js     Carga los productos y los muestra
-js/carrito.js       Todo lo del carrito
-js/app.js           Arranca todo cuando carga la pagina
+index.html              La pagina principal
+data/data.json          Los productos con sus imagenes
+css/style.css           Los estilos de la pagina
+js/productos.js         Carga los productos y los muestra
+js/carrito.js           Todo lo del carrito
+js/app.js               Arranca todo cuando carga la pagina
 ```
 
 ## Herramientas que use

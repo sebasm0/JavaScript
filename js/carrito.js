@@ -76,15 +76,33 @@ function cambiarCantidad(idProducto, cambio) {
     return;
   }
 
-  item.cantidad = item.cantidad + cambio;
+  const nuevaCantidad = item.cantidad + cambio;
 
-  if (item.cantidad <= 0) {
+  if (nuevaCantidad <= 0) {
     eliminarDelCarrito(idProducto);
     return;
   }
 
+  const producto = productos.find(function(p) {
+    return p.id === idProducto;
+  });
+
+  if (producto && nuevaCantidad > producto.stock) {
+    Toastify({
+      text: "No hay mas stock disponible",
+      duration: 2000,
+      gravity: "top",
+      position: "right",
+      style: { background: "#e74c3c" }
+    }).showToast();
+    return;
+  }
+
+  item.cantidad = nuevaCantidad;
+
   guardarCarrito();
   renderizarCarrito();
+  renderizarProductos(productos);
 }
 
 function calcularTotal() {
